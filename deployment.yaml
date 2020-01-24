@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: orion1-service
+  labels:
+    name: orionservice1-nodeport-svc
+spec:
+  type: NodePort
+  ports:
+    - port: 1027
+      nodePort: 30290
+      name: http
+    - port: 444
+      nodePort: 31555
+      name: https
+  selector:
+    name: broker1
