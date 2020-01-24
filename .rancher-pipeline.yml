@@ -1,0 +1,9 @@
+stages:
+- name: deployment
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+  - applyYamlConfig:
+      path: ./service.yaml
+timeout: 60
+notification: {}
