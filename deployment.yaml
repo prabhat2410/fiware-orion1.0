@@ -12,7 +12,7 @@ spec:
       containers:
       
       - name: orion1
-        image: csp2-centos-1:5000/fiware-orion
+        image: docker.io/fiware/orion
         resources:
          limits:
           memory: "1Gi"
